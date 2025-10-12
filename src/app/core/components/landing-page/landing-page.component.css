@@ -3,11 +3,22 @@
     flex-direction: column;
 }
 
-h1,
-button {
-    margin: auto;
+h1 {
+    margin: 15% auto 0 auto;
+    font-size: 40px;
 }
 
 button {
-    width: 200px;
+    margin: 25px auto;
+}
+
+button {
+    width: 250px;
+    height: 60px;
+    font-size: large;
+    border-radius: 15px;
+}
+
+button:hover {
+    color: rgb(1, 10, 95);
 }
