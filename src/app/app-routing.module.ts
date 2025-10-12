@@ -4,7 +4,7 @@ import { LandingPageComponent } from './core/components/landing-page/landing-pag
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
-  { path: '*', loadChildren: () => import('./core/core.module').then(m => m.CoreModule)},
+  { path: 'gallery', loadChildren: () => import('./core/core.module').then(m => m.CoreModule)},
 ];
 
 @NgModule({

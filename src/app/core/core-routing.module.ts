@@ -5,8 +5,8 @@ import { SinglePictureComponent } from "./components/single-picture/single-pictu
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 
 const routes: Routes = [
-  { path: 'gallery', component: GalleryComponent },
-  { path: 'gallery/view/:name', component: SinglePictureComponent },
+  { path: '', component: GalleryComponent },
+  { path: 'view/:name', component: SinglePictureComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '404' },
 
