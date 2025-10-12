@@ -35,7 +35,9 @@ import { HeaderComponent } from './components/header/header.component';
         NotFoundComponent,
         GalleryComponent,
         NotFoundComponent,
-        SinglePictureComponent
+        SinglePictureComponent,
+        HeaderComponent
+
     ]
 })
 export class CoreModule {

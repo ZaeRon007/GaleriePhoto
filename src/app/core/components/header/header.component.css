@@ -1,0 +1,14 @@
+div {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: whitesmoke;
+    color: rgb(50, 50, 156);
+}
+
+mat-icon {
+    scale: 1.5;
+    justify-self: flex-start;
+}
