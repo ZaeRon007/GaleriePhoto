@@ -5,10 +5,33 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    gap: 25px;
+    gap: 10px;
 
     img {
         width: 350px;
         height: 350px;
+    }
+
+    /* overflow-y: auto; */
+}
+
+@media (min-width: 950px) {
+    .size {
+        width: 250px !important;
+        height: 250px !important;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 630px){
+    .size {
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+
+@media (max-width: 630px) {
+    .size {
+        width: 180px !important;
+        height: 180px !important;
     }
 }

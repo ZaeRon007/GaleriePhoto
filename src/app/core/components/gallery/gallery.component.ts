@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { RedirectCommand, Router } from '@angular/router';
 import { BehaviorSubject, catchError, Observable, of, Subscription, tap } from 'rxjs';
 
 @Component({
@@ -8,7 +9,9 @@ import { BehaviorSubject, catchError, Observable, of, Subscription, tap } from '
   styleUrl: './gallery.component.css'
 })
 export class GalleryComponent implements OnInit {
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+    private router: Router
+  ) {
 
   }
 
@@ -16,12 +19,14 @@ export class GalleryComponent implements OnInit {
   files$!: Observable<string[]>;
 
   ngOnInit(): void {
-    this.filePath = "/list.json";
+    this.filePath = "/assets/list.json";
 
     this.files$ = this.http.get<string[]>(this.filePath).pipe(
       catchError((error) => {
         console.error(error);
+        this.router.navigateByUrl('404');
         return of<string[]>([]);
+
       })
     );
 

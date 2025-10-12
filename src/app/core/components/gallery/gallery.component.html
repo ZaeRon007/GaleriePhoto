@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="container">
     <mat-card *ngFor="let file of files$ | async">
-        <img mat-card-image [src]="'/' + file" alt="{{ file }}" [routerLink]="['/gallery/view', file]">
+        <img mat-card-image class="size" [src]="'assets/' + file" alt="{{ file }}" [routerLink]="['/gallery/view', file]">
     </mat-card>
 </div>
