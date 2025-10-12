@@ -12,6 +12,6 @@ export class LandingPageComponent {
   }
 
   start() {
-    this.router.navigateByUrl('/gallery');
+    this.router.navigateByUrl('gallery');
   }
 }
