@@ -8,6 +8,10 @@ div {
     color: rgb(50, 50, 156);
 }
 
+h1 {
+    font-size: 40px;
+}
+
 mat-icon {
     scale: 1.5;
     justify-self: flex-start;
