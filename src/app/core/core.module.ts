@@ -9,6 +9,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { GalleryComponent } from "./components/gallery/gallery.component";
 import { SinglePictureComponent } from "./components/single-picture/single-picture.component";
 import { MatIcon } from "@angular/material/icon";
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { MatIcon } from "@angular/material/icon";
         NotFoundComponent,
         GalleryComponent,
         NotFoundComponent,
-        SinglePictureComponent
+        SinglePictureComponent,
+        HeaderComponent
     ],
     imports: [
         CommonModule,
