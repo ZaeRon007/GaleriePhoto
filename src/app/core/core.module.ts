@@ -10,6 +10,7 @@ import { GalleryComponent } from "./components/gallery/gallery.component";
 import { SinglePictureComponent } from "./components/single-picture/single-picture.component";
 import { MatIcon } from "@angular/material/icon";
 import { HeaderComponent } from './components/header/header.component';
+import { MatCard } from "@angular/material/card";
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { HeaderComponent } from './components/header/header.component';
         CoreRoutingModule,
         MatGridList,
         MatButton,
-        MatIcon
+        MatIcon,
+        MatCard
     ],
     providers: [
     ],

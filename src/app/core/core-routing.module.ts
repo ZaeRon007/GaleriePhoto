@@ -6,7 +6,7 @@ import { NotFoundComponent } from "./components/not-found/not-found.component";
 
 const routes: Routes = [
   { path: 'gallery', component: GalleryComponent },
-  { path: 'view/:id', component: SinglePictureComponent },
+  { path: 'gallery/view/:name', component: SinglePictureComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '404' },
 

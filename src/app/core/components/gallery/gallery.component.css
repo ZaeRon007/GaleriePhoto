@@ -1,0 +1,14 @@
+.container {
+    margin: 25px 0 25px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 25px;
+
+    img {
+        width: 350px;
+        height: 350px;
+    }
+}
