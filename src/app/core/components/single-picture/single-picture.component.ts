@@ -16,6 +16,5 @@ export class SinglePictureComponent implements OnInit{
 
   ngOnInit(): void {
     this.Name = this.route.snapshot.paramMap.get('name') ?? '';
-    console.log(this.Name);
   }
 }
