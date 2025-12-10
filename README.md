@@ -1,27 +1,75 @@
-# Front
+# INSTALLATION GUIDE
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
+## SETUP ENVIRONNEMENT IN LINUX
 
-## Development server
+### Java installation :
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+You need to run in a terminal the command : ` sudo apt install openjdk-21-jdk -y `
 
-## Code scaffolding
+### Maven installation : 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+First, download maven 3.9.9 or superior at https://maven.apache.org/download.cgi
 
-## Build
+Now unzip the downloaded archive manually or by this commands :  
+` cd ~/Téléchargements `  
+` unzip apache-maven-3.9.9-bin.zip `
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Move the folder in /opt :  
+` sudo mv apache-maven-3.9.9 /opt `
 
-## Running unit tests
+### Paths Settings for Java & Maven :
+You need to add to path theses folders by editing the .profile file :  
+` gedit ~/.profile `  
+Add the following lines at the end of this file :  
+`#java path`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"`
 
-## Running end-to-end tests
+`#maven path`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+`export MAVEN_HOME="/opt/apache-maven-3.8.8/"`
 
-## Further help
+`export M2_HOME="/opt/apache-maven-3.8.8/"`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+`export PATH=${M2_HOME}/bin:${PATH}`
+
+### Mysql installation & configuration : 
+
+Do the following command to install mysql : 
+
+`sudo apt install mysql-server`
+
+To configure a user account do the following : 
+
+`sudo mysql -u root -p`
+
+`CREATE DATABASE yoga;`
+
+`CREATE USER 'user'@'localhost' IDENTIFIED BY 'user';`
+
+`GRANT ALL ON *.* to 'user'@'localhost';`
+
+Hit combinaison `CTRL + D` to leave mysql server.
+
+## INSTALL PROJECT FILES :  
+
+### Install Front-end API : 
+
+You need to download archive at https://github.com/ZaeRon007/GaleriePhoto.git or clone this repository. 
+
+Next, we need to install node : 
+
+- Download and install nvm:
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash`.
+- close and reopen a terminal.
+- Download and install Node.js : `nvm install 24`.
+- Verify the Node.js version : `node -v # Should print "v24.11.1"`.
+- Verify npm version : `npm -v # Should print "11.6.2"`.
+
+Then we need to install Angular Client and configure it as global with : `npm install -g @angular/cli`.
+
+Finally, go to project directory and run `npm install`.
+
+# HOW TO LAUNCH PROJECT : 
+
+You should now be abble to run `ng serve` in front directory
