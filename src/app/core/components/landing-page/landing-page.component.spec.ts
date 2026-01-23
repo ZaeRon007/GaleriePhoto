@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LandingPageComponent } from './landing-page.component';
+import { HeaderComponent } from '../header/header.component';
+import { MatIconModule } from '@angular/material/icon';
 
 describe('LandingPageComponent', () => {
   let component: LandingPageComponent;
@@ -8,7 +10,10 @@ describe('LandingPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LandingPageComponent]
+      declarations: [LandingPageComponent, HeaderComponent],
+      imports: [
+        MatIconModule
+      ]
     })
     .compileComponents();
 
@@ -19,5 +24,10 @@ describe('LandingPageComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should contain a title', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('Picture Gallery');
   });
 });
