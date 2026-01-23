@@ -70,6 +70,11 @@ Then we need to install Angular Client and configure it as global with : `npm in
 
 Finally, go to project directory and run `npm install`.
 
+# HOW TO LAUNCH UNIT TEST : 
+
+You need to locate the terminal inside the project folder and run this command : `npm run test`.   
+If you want to see the coverage option use this command : `npm run test:coverage`.
+
 # HOW TO LAUNCH PROJECT : 
 
 You should now be abble to run `ng serve` in front directory
